@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Grapes']
+
+roboflow:
+  workspace: uno-heomx
+  project: grape-segmentation-ya3hj
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/uno-heomx/grape-segmentation-ya3hj/dataset/2
