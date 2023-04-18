@@ -24,8 +24,10 @@ for i in range(temp.shape[2]):
         os.remove(path)
     cv2.imwrite(path, grape_image)
     # Find the contours of the grape regions
-    contours, hierarchy = cv2.findContours(grape_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(grape_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    # one_seg_contours=np.concatenate(contours)
     # print(contours)
+    # cont.append(one_seg_contours)
     for contour in contours:
         cont.append(contour)
         x,y,w,h = cv2.boundingRect(contour)
